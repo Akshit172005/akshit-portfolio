@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akshit Gupta | Data Scientist</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+    scroll-behavior:smooth;
+    }
+    
+    body{
+    background:#0d0f14;
+    color:#ffffff;
+    line-height:1.6;
+    }
+    
+    /* NAV */
+    nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    background:#11141b;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    z-index:1000;
+    }
+    
+    nav a{
+    color:#aaaaaa;
+    margin-left:25px;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+    }
+    
+    nav a:hover{
+    color:#0077ff;
+    }
+    
+    /* HERO */
+    .hero{
+    padding-top:140px;
+    padding-bottom:80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:100px;
+    max-width:1200px;
+    margin:auto;
+    }
+    
+    .hero-text{
+    max-width:550px;
+    }
+    
+    .hero-text h1{
+    font-size:3rem;
+    font-weight:800;
+    }
+    
+    .gradient-text{
+    color:#ffffff;
+    position:relative;
+    }
+    
+    .gradient-text::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:60%;
+    height:3px;
+    background:#0077ff;
+    border-radius:5px;
+    }
+    
+    .hero-text h2{
+    margin-top:15px;
+    color:#cccccc;
+    font-weight:400;
+    }
+    
+    .hero-text p{
+    margin-top:20px;
+    color:#b5b5b5;
+    }
+    
+    .hero-buttons{
+    margin-top:20px;
+    display:flex;
+    gap:15px;
+    }
+    
+    .btn{
+    padding:10px 20px;
+    background:#0077ff;
+    border:none;
+    border-radius:6px;
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+    }
+    
+    .btn:hover{
+    background:#005ec4;
+    }
+    
+    .btn-outline{
+    padding:10px 20px;
+    border:1px solid #0077ff;
+    border-radius:6px;
+    color:#ffffff;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+    }
+    
+    .btn-outline:hover{
+    background:#0077ff;
+    }
+    
+    /* PHOTO */
+    .photo-container{
+    position:relative;
+    }
+    
+    .photo-container::before{
+    content:"";
+    position:absolute;
+    top:-20px;
+    right:-20px;
+    width:100%;
+    height:100%;
+    border-radius:25px;
+    background:#0077ff;
+    filter:blur(60px);
+    opacity:0.25;
+    z-index:-1;
+    }
+    
+    .photo-container img{
+    width:280px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.08);
+    }
+    
+    /* SOCIAL ICONS */
+    .social-links{
+    margin-top:30px;
+    display:flex;
+    gap:20px;
+    }
+    
+    .social-icon{
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#141821;
+    border:1px solid rgba(255,255,255,0.08);
+    color:#ffffff;
+    font-size:20px;
+    transition:0.3s;
+    text-decoration:none;
+    }
+    
+    .social-icon:hover{
+    background:#0077ff;
+    transform:translateY(-5px);
+    }
+    
+    /* SECTIONS */
+    section{
+    padding:60px 80px;
+    max-width:1200px;
+    margin:auto;
+    border-top:1px solid rgba(255,255,255,0.05);
+    }
+    
+    #skills{
+    margin-top:-20px;
+    }
+    
+    .section-title{
+    font-size:2rem;
+    margin-bottom:25px;
+    color:#ffffff;
+    }
+    
+    /* SKILLS */
+    .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+    }
+    
+    .skill{
+    background:#141821;
+    padding:16px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.06);
+    text-align:center;
+    transition:0.3s;
+    }
+    
+    .skill:hover{
+    transform:translateY(-5px);
+    border-color:#0077ff;
+    }
+    
+    .skill i{
+    font-size:26px;
+    margin-bottom:6px;
+    display:block;
+    }
+    
+    /* CARDS */
+    .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    }
+    
+    .card{
+    background:#141821;
+    padding:20px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.06);
+    transition:0.3s;
+    }
+    
+    .card:hover{
+    transform:translateY(-6px);
+    border-color:#0077ff;
+    }
+    
+    .card h3{
+    color:#0077ff;
+    margin-bottom:10px;
+    }
+    
+    /* CONTACT */
+    form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:500px;
+    }
+    
+    input,textarea{
+    background:#141821;
+    border:1px solid rgba(255,255,255,0.06);
+    padding:12px;
+    border-radius:8px;
+    color:#fff;
+    }
+    
+    textarea{
+    height:120px;
+    resize:none;
+    }
+    
+    .send-btn{
+    background:#0077ff;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    color:#fff;
+    cursor:pointer;
+    transition:0.3s;
+    }
+    
+    .send-btn:hover{
+    background:#005ec4;
+    }
+    
+    /* MOBILE */
+    @media(max-width:900px){
+    .hero{
+    flex-direction:column;
+    text-align:center;
+    }
+    .hero-buttons{
+    justify-content:center;
+    }
+    .social-links{
+    justify-content:center;
+    }
+    section{
+    padding:50px 30px;
+    }
+    nav{
+    padding:15px 30px;
+    }
+    .photo-container{
+    margin-top:30px;
+    }
+    }
+    </style>
+</head>
+<body>
+
+<nav>
+<div><strong>Akshit</strong></div>
+<div>
+<a href="#skills">Expertise</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+<a href="resume.pdf" download>Resume</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-text">
+<h1>I’m <span class="gradient-text">Akshit Gupta</span></h1>
+<h2>Data Scientist | AI/ML Systems Integrator</h2>
+<p>
+I design data-driven systems and integrate AI/ML models into scalable applications.
+From predictive analytics to intelligent automation platforms, I build solutions
+that transform raw data into measurable business impact.
+</p>
+
+<div class="hero-buttons">
+<a href="#projects" class="btn">View Projects</a>
+<a href="resume.pdf" download class="btn-outline">Download Resume</a>
+</div>
+
+<div class="social-links">
+<a href="https://www.linkedin.com/in/aksg17" target="_blank" class="social-icon">
+<i class="devicon-linkedin-plain"></i>
+</a>
+<a href="https://www.instagram.com/akshitx17_?igsh=MXQ1ZnBwcnZtZnp0NQ==" target="_blank" class="social-icon">
+<i class="fab fa-instagram"></i>
+</a>
+<a href="https://github.com/Akshit172005" target="_blank" class="social-icon">
+<i class="devicon-github-original"></i>
+</a>
+</div>
+</div>
+
+<div class="photo-container">
+<img src="akshit.jpg" alt="Akshit Gupta">
+</div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+<h1 class="section-title">Core Expertise</h1>
+<div class="skills-grid">
+<div class="skill"><i class="devicon-python-plain colored"></i>Python</div>
+<div class="skill"><i class="devicon-pandas-original colored"></i>Data Processing</div>
+<div class="skill"><i class="devicon-scikitlearn-plain colored"></i>Machine Learning</div>
+<div class="skill"><i class="devicon-tensorflow-original colored"></i>Deep Learning</div>
+<div class="skill"><i class="devicon-mysql-plain colored"></i>SQL</div>
+<div class="skill"><i class="devicon-flask-original colored"></i>Model Deployment</div>
+<div class="skill">NLP</div>
+<div class="skill">AI Integration</div>
+<div class="skill">Data Structures</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h1 class="section-title">Projects</h1>
+<div class="grid">
+<div class="card">
+<h3>SmartAdGuide</h3>
+<p>ML-powered marketing intelligence platform with predictive optimization.</p>
+</div>
+<div class="card">
+<h3>Business Cost Estimator</h3>
+<p>AI-based startup cost modeling platform using predictive modeling.</p>
+</div>
+<div class="card">
+<h3>TalentScout Hiring Platform</h3>
+<p>NLP-powered hiring assistant automating resume screening.</p>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<h1 class="section-title">Professional Experience</h1>
+<div class="grid">
+<div class="card">
+<h3>Growth Jet Media – Social Media Intern</h3>
+<p>Analyzed engagement metrics and optimized international strategies using data insights.</p>
+</div>
+<div class="card">
+<h3>Astrophysicast – Research Blogger</h3>
+<p>Converted complex astrophysics research into structured analytical content.</p>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h1 class="section-title">Contact</h1>
+<form action="https://formsubmit.co/e23cseu1432@bennett.edu.in" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Portfolio Message">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" required></textarea>
+<button type="submit" class="send-btn">Send Message</button>
+</form>
+</section>
+
+</body>
+</html>
